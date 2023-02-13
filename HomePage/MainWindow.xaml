@@ -1,0 +1,44 @@
+﻿<Window x:Class="HomePage.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HomePage"
+        xmlns:UIMenuIGuess="clr-namespace:HomePage.UI.MenuckoChalpci"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="70*"/>
+        </Grid.ColumnDefinitions>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="35*"/>
+                <RowDefinition Height="65*"/>
+            </Grid.RowDefinitions>
+            <Grid Background="Blue">
+                <Ellipse Width="100" Height="100">
+                    <Ellipse.Fill>
+                        <ImageBrush ImageSource="D:\OL\HomePage\HomePage\Obrazky\tvar.jpg"></ImageBrush>
+                    </Ellipse.Fill>
+                </Ellipse>
+            </Grid>
+            <Grid Grid.Row="1">
+                <UIMenuIGuess:MenuAsiLol/>
+            </Grid>
+        </Grid>
+        <Grid Grid.Column="1" Background="Gray">
+            <ScrollViewer>
+                <StackPanel>
+                    <Label HorizontalAlignment="Center" VerticalAlignment="Top" 
+                   Content="Recepty" FontSize="50" Foreground="Purple">
+                    </Label>
+                </StackPanel>
+            </ScrollViewer>
+            <Image Source="D:\OL\HomePage\HomePage\Obrazky\pizza.jpg" Width="200" 
+                   HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,100" 
+                   />
+        </Grid>
+    </Grid>
+</Window>
