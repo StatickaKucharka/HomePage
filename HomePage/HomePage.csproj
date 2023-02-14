@@ -55,8 +55,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Recipe.cs" />
     <Compile Include="UI\MenuckoChalpci\MenuAsiLol.xaml.cs">
       <DependentUpon>MenuAsiLol.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ReceptAVsetkoOkolo\Receptik.xaml.cs">
+      <DependentUpon>Receptik.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -71,6 +75,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="UI\MenuckoChalpci\MenuAsiLol.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\ReceptAVsetkoOkolo\Receptik.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -105,10 +113,40 @@
     <Resource Include="Obrazky\ikonky\HomePage.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Obrazky\tvar.jpg" />
+    <Resource Include="Obrazky\UserProfile\tvar.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Obrazky\pizza.jpg" />
+    <Resource Include="Obrazky\recepty\recept1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Obrazky\recepty\recept2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Obrazky\recepty\recept3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Obrazky\recepty\recept4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Obrazky\recepty\recept5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Obrazky\recepty\recept6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Obrazky\recepty\recept7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Obrazky\recepty\recept8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Obrazky\recepty\recept9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Obrazky\recepty\recept10.jpg" />
+    <Resource Include="Obrazky\recepty\recept11.jpg" />
+    <Resource Include="Obrazky\recepty\recept12.jpg" />
+    <Resource Include="Obrazky\recepty\recept13.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
