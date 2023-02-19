@@ -15,7 +15,7 @@
             </Menu.ItemsPanel>
             <MenuItem FontSize="30" Header="Home" HorizontalAlignment="Center" >
                 <MenuItem.Icon>
-                    <Image Source="D:\OL\HomePage\HomePage\Obrazky\ikonky\HomePage.png" 
+                    <Image Source="/Obrazky/ikonky/HomePage.png" 
                            Height="20" Width="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                 </MenuItem.Icon>
             </MenuItem>

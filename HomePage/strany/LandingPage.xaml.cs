@@ -13,23 +13,23 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace HomePage
+namespace HomePage.strany
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for LandingPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class LandingPage : Page
     {
-        public MainWindow()
+        public LandingPage()
         {
             InitializeComponent();
-            /*var recipes = GetRecipes();
-            if(recipes.Count > 0)
+            var recipes = GetRecipes();
+            if (recipes.Count > 0)
             {
                 ListViewRecipes.ItemsSource = recipes;
-            }*/
+            }
         }
-        /*private List<Recipe> GetRecipes()
+        private List<Recipe> GetRecipes()
         {
             return new List<Recipe>()
             {
@@ -50,10 +50,14 @@ namespace HomePage
             };
         }
 
-        private void Border_MouseDown(object sender, MouseButtonEventArgs e)
+
+        private void Grid_Click(object sender, RoutedEventArgs e)
         {
-            
-        }*/
+
+            var ClickedButton = e.OriginalSource as NavButton;
+
+            NavigationService.Navigate(ClickedButton.NavUri);
+        }
 
     }
 }

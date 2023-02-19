@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace HomePage.UI.ReceptAVsetkoOkolo
+namespace HomePage.strany
 {
     /// <summary>
-    /// Interaction logic for Receptik.xaml
+    /// Interaction logic for Recepticky.xaml
     /// </summary>
-    public partial class Receptik : UserControl
+    public partial class Recepticky : Page
     {
-        public Receptik()
+        public Recepticky()
         {
             InitializeComponent();
         }
