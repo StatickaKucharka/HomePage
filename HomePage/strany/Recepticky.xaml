@@ -8,7 +8,8 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Recepticky">
 
-    <Grid>
+    <Grid Background="Wheat">
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="50">Tuto bude náš recept</TextBlock>
         
     </Grid>
 </Page>
