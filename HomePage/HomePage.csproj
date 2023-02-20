@@ -135,37 +135,63 @@
     <Resource Include="Obrazky\UserProfile\tvar.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Obrazky\recepty\recept1.jpg" />
+    <Resource Include="Obrazky\recepty\recept1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Obrazky\recepty\recept2.jpg" />
+    <Resource Include="Obrazky\recepty\recept2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Obrazky\recepty\recept3.jpg" />
+    <Resource Include="Obrazky\recepty\recept3.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Obrazky\recepty\recept4.jpg" />
+    <Resource Include="Obrazky\recepty\recept4.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Obrazky\recepty\recept5.jpg" />
+    <Resource Include="Obrazky\recepty\recept5.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Obrazky\recepty\recept6.jpg" />
+    <Resource Include="Obrazky\recepty\recept6.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Obrazky\recepty\recept7.jpg" />
+    <Resource Include="Obrazky\recepty\recept7.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Obrazky\recepty\recept8.jpg" />
+    <Resource Include="Obrazky\recepty\recept8.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Obrazky\recepty\recept9.jpg" />
+    <Resource Include="Obrazky\recepty\recept9.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Obrazky\recepty\recept10.jpg" />
-    <Resource Include="Obrazky\recepty\recept11.jpg" />
-    <Resource Include="Obrazky\recepty\recept12.jpg" />
-    <Resource Include="Obrazky\recepty\recept13.jpg" />
+    <Resource Include="Obrazky\recepty\recept10.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Obrazky\recepty\recept11.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Obrazky\recepty\recept12.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Obrazky\recepty\recept13.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
