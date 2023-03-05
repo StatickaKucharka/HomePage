@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,25 @@ namespace HomePage.strany
         public Page1()
         {
             InitializeComponent();
+        }
+
+        private void CestaKObrazku_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        public void Button_Click(object sender, RoutedEventArgs e)
+        {
+            
+            LandingPage achh = new LandingPage();
+            MessageBoxResult result = MessageBox.Show("Are you sure you want to add recipe?", "Question", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            if(result == MessageBoxResult.Yes) { 
+                
+                achh.AddRecipeToList(new Recipe(TBXNadpis.Text, CestaKObrazku.Text));
+            }
+            
+            
+            
         }
     }
 }

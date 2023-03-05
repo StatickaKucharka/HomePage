@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HomePage
 {
-    internal class Recipe
+    public class Recipe
     {
 
 

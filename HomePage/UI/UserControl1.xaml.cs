@@ -13,22 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace HomePage.UI.MenuckoChalpci
+namespace HomePage.UI
 {
     /// <summary>
-    /// Interaction logic for MenuAsiLol.xaml
+    /// Interaction logic for UserControl1.xaml
     /// </summary>
-    public partial class MenuAsiLol : UserControl
+    public partial class UserControl1 : UserControl
     {
-        public MenuAsiLol()
+        public UserControl1()
         {
             InitializeComponent();
-            
-        }
-        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
-        {
-            NavigationService navService = NavigationService.GetNavigationService(this);
-            navService.Navigate(new System.Uri("/strany/Page1.xaml", UriKind.RelativeOrAbsolute));
         }
     }
 }
