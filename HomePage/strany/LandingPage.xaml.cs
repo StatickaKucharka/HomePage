@@ -20,37 +20,65 @@ namespace HomePage.strany
     /// </summary>
     public partial class LandingPage : Page
     {
-        Page1 skusam = new Page1();
-        List<Recipe> recipes = new List<Recipe>();
-            
+
+        private List<Recipe> recipes = new List<Recipe>();
+        public List<Recipe> Recipes { get { return this.recipes; } set { this.recipes = value; } }
+
+
+
         public LandingPage()
         {
-            
-            
+
+
             InitializeComponent();
-            var recepty = GetRecipes();
-            if (recipes.Count > 0)
+            this.DataContext = this;
+            AddRecipe(new Recipe("recept1", "/Obrazky/recepty/recept1.jpg"));
+            AddRecipe(new Recipe("recept2", "/Obrazky/recepty/recept2.jpg"));
+            AddRecipe(new Recipe("recept3", "/Obrazky/recepty/recept3.jpg"));
+            AddRecipe(new Recipe("recept4", "/Obrazky/recepty/recept4.jpg"));
+            AddRecipe(new Recipe("recept5", "/Obrazky/recepty/recept5.jpg"));
+            AddRecipe(new Recipe("recept6", "/Obrazky/recepty/recept6.jpg"));
+            AddRecipe(new Recipe("recept7", "/Obrazky/recepty/recept7.jpg"));
+            AddRecipe(new Recipe("recept8", "/Obrazky/recepty/recept8.jpg"));
+            AddRecipe(new Recipe("recept9", "/Obrazky/recepty/recept9.jpg"));
+            AddRecipe(new Recipe("recept10", "/Obrazky/recepty/recept10.jpg"));
+            AddRecipe(new Recipe("recept11", "/Obrazky/recepty/recept11.jpg"));
+            AddRecipe(new Recipe("recept12", "/Obrazky/recepty/recept12.jpg"));
+
+
+            if (Recipes.Count > 0)
             {
-                ListViewRecipes.ItemsSource = GetRecipes();
+                ListViewRecipes.ItemsSource = Recipes;
             }
+
+
+        }
+        public void AddRecipe(Recipe recept)
+        {
+            recipes.Add(recept);
+
         }
         public List<Recipe> GetRecipes()
         {
-            return recipes;
-            {
-                
-            };
+            return Recipes;
         }
-        
-       
-        public void AddRecipeToList(Recipe recept)
-        {
-            recipes.Add(recept); 
-        }
+
+
+
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
         {
             NavigationService navService = NavigationService.GetNavigationService(this);
             navService.Navigate(new System.Uri("/strany/Recepticky.xaml", UriKind.RelativeOrAbsolute));
+        }
+
+        private void MenuAsiLol_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

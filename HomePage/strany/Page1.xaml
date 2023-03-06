@@ -23,49 +23,50 @@
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
             Text="Add Recipe" FontSize="40">
-            
+
         </TextBlock>
         <Grid Grid.Row="1">
             <StackPanel Grid.Row="1" HorizontalAlignment="Center" 
             VerticalAlignment="Top">
-            <TextBlock FontSize="25" Text="Nadpis Receptu:"></TextBlock>
-            <TextBox 
-            FontSize="20"
-            TextWrapping="Wrap"
-                x:Name="TBXNadpis">
-                
-            </TextBox>
-            
-        </StackPanel>
+                <TextBlock FontSize="25" Text="Nadpis Receptu:"></TextBlock>
+                <TextBox 
+                FontSize="20"
+                TextWrapping="Wrap"
+                x:Name="TBXNadpis"
+                >
+                </TextBox>
+            </StackPanel>
             <StackPanel Grid.Row="1" HorizontalAlignment="Center" 
             VerticalAlignment="Center">
                 <TextBlock FontSize="25" Text="Ingrediencie:"></TextBlock>
                 <TextBox 
-            FontSize="20"
-            TextWrapping="Wrap"
-                    x:Name="Ingrediencie"
-                    >
+                FontSize="20"
+                TextWrapping="Wrap"
+                x:Name="Ingrediencie"
+                >
                 </TextBox>
             </StackPanel>
             <StackPanel Grid.Row="1" HorizontalAlignment="Center" 
             VerticalAlignment="Bottom">
                 <TextBlock FontSize="25" Text="Postup:"></TextBlock>
                 <TextBox 
-            FontSize="20"
-            TextWrapping="Wrap"
-                    x:Name="Postup">
-                    
+                 FontSize="20"
+                 TextWrapping="Wrap"
+                 x:Name="Postup">
+
                 </TextBox>
 
             </StackPanel>
         </Grid>
         <Grid Grid.Row="1" Grid.Column="1">
-            <StackPanel Grid.Row="1" HorizontalAlignment="Center" 
-            VerticalAlignment="Center">
+            <StackPanel Grid.Row="1" 
+                        HorizontalAlignment="Center" 
+                        VerticalAlignment="Center">
                 <TextBlock FontSize="25" Text="adresaObrazku:"></TextBlock>
                 <TextBox x:Name="CestaKObrazku" 
-                FontSize="20"
-            TextWrapping="Wrap" TextChanged="CestaKObrazku_TextChanged">
+                         FontSize="20"
+                         TextWrapping="Wrap"
+                         >
                 </TextBox>
             </StackPanel>
         </Grid>
@@ -73,9 +74,13 @@
                 Grid.ColumnSpan="2"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
-                FontSize="50"
+
                 Content="Add"
                 Click="Button_Click"
-                Name ="HauoPanKolega"></Button>
+                Name ="HauoPanKolega"
+                
+                >
+           
+        </Button>
     </Grid>
 </Page>

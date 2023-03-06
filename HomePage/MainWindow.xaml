@@ -4,11 +4,10 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HomePage"
-        xmlns:UIMenuIGuess="clr-namespace:HomePage.UI.MenuckoChalpci"
-        
+        xmlns:UIMenuIGuess="clr-namespace:HomePage.UI.MenuckoChalpci"        
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Frame x:Name="myFrame" Source="strany/LandingPage.xaml" />
+        <Frame x:Name="myFrame" Source="strany/LandingPage.xaml" Navigated="myFrame_Navigated" />
     </Grid>
 </Window>
