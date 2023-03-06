@@ -25,7 +25,7 @@
                       Height="42"
                       VerticalAlignment="Top" />
             <MenuItem FontSize="30" 
-                      Header="Add Recipe"
+                      Header="Addfafawff Recipe"
                       HorizontalAlignment="Stretch" Click="MenuItem_Click_1"/>
             <MenuItem FontSize="30" 
                       Header="Favourites"
