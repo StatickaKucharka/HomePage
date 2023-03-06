@@ -8,32 +8,25 @@
              mc:Ignorable="d" 
              d:DesignHeight="400" d:DesignWidth="400">
     <StackPanel Background="Transparent">
-        <Menu x:Name="menucko">
-            <Menu.ItemsPanel>
-                <ItemsPanelTemplate>
-                    <VirtualizingStackPanel Orientation="Vertical"/>
-                </ItemsPanelTemplate>
-            </Menu.ItemsPanel>
-            <MenuItem x:Name ="Home" FontSize="30" Header="Home" HorizontalAlignment="Stretch">
-                <MenuItem.Icon>
-                    <Image Source="/Obrazky/ikonky/HomePage.png" 
-                           Height="20" Width="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                </MenuItem.Icon>
-            </MenuItem>
-            <MenuItem FontSize="30" Header="FYP"  
-                      HorizontalAlignment="Stretch" 
-                      Height="42"
-                      VerticalAlignment="Top" />
-            <MenuItem FontSize="30" 
-                      Header="Addfafawff Recipe"
-                      HorizontalAlignment="Stretch" Click="MenuItem_Click_1"/>
-            <MenuItem FontSize="30" 
-                      Header="Favourites"
-                      HorizontalAlignment="Stretch"/>
-            <MenuItem FontSize="30" 
-                      Header="Contact us"
-                      HorizontalAlignment="Stretch"
-                      />
-        </Menu>
+        <TreeView
+  MinWidth="220">
+            <TreeViewItem
+    Header="Domov" />
+            <TreeViewItem
+    Header="Zlepši sa">
+                <TreeViewItem
+      Header="Kuchárky" />
+                <TreeViewItem
+      Header="Tutoriály" />
+                <TreeViewItem
+      Header="Obchod" />
+            </TreeViewItem>
+            <TreeViewItem
+    Header="Pridať Recept" MouseUp="TreeViewItem_MouseUp" />
+        </TreeView>
+        <TreeViewItem
+    Header="Profil"  />
+        <TreeViewItem
+    Header="Nastavenia" />
     </StackPanel>
 </UserControl>

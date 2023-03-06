@@ -28,21 +28,21 @@ namespace HomePage.strany
         public Page1()
         {
             InitializeComponent();
-            
+
 
         }
 
         public void Button_Click(object sender, RoutedEventArgs e)
         {
-            
+
             Recipe recept = new Recipe(TBXNadpis.Text, CestaKObrazku.Text);
             this.DataContext = recept;
             ach.AddRecipe(recept);
-            
+
             NavigateToPage2();
 
         }
-       
+
 
         private void NavigateToPage2()
         {
@@ -55,4 +55,3 @@ namespace HomePage.strany
         }
     }
 }
-

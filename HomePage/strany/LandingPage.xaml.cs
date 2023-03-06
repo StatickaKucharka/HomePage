@@ -23,13 +23,13 @@ namespace HomePage.strany
 
         private List<Recipe> recipes = new List<Recipe>();
         public List<Recipe> Recipes { get { return this.recipes; } set { this.recipes = value; } }
-        
-        
-        
+
+
+
         public LandingPage()
         {
 
-            
+
             InitializeComponent();
             this.DataContext = this;
             AddRecipe(new Recipe("recept1", "/Obrazky/recepty/recept1.jpg"));
@@ -44,32 +44,41 @@ namespace HomePage.strany
             AddRecipe(new Recipe("recept10", "/Obrazky/recepty/recept10.jpg"));
             AddRecipe(new Recipe("recept11", "/Obrazky/recepty/recept11.jpg"));
             AddRecipe(new Recipe("recept12", "/Obrazky/recepty/recept12.jpg"));
-            
+
 
             if (Recipes.Count > 0)
             {
                 ListViewRecipes.ItemsSource = Recipes;
             }
-            
-            
+
+
         }
         public void AddRecipe(Recipe recept)
         {
             recipes.Add(recept);
-            
+
         }
         public List<Recipe> GetRecipes()
         {
-            return Recipes;   
+            return Recipes;
         }
 
-       
-            
-        
+
+
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
         {
             NavigationService navService = NavigationService.GetNavigationService(this);
             navService.Navigate(new System.Uri("/strany/Recepticky.xaml", UriKind.RelativeOrAbsolute));
+        }
+
+        private void MenuAsiLol_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

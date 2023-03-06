@@ -23,9 +23,11 @@ namespace HomePage.UI.MenuckoChalpci
         public MenuAsiLol()
         {
             InitializeComponent();
-            
+
         }
-        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
+
+
+        private void TreeViewItem_MouseUp(object sender, MouseButtonEventArgs e)
         {
             NavigationService navService = NavigationService.GetNavigationService(this);
             navService.Navigate(new System.Uri("/strany/Page1.xaml", UriKind.RelativeOrAbsolute));
