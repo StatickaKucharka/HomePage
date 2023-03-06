@@ -15,6 +15,7 @@
             <ColumnDefinition Width="70*"/>
         </Grid.ColumnDefinitions>
         <Grid>
+            
             <Grid.RowDefinitions>
                 <RowDefinition Height="35*"/>
                 <RowDefinition Height="65*"/>
@@ -52,17 +53,17 @@
                         <StackPanel>
                             <TextBlock Text="Recipes" Margin="10" FontSize="22" FontWeight="Medium"/>
                             <StackPanel Margin="20,0">
-                                <ItemsControl x:Name="ListViewRecipes" ItemsSource="{Binding BindsDirectlyToSource=True}">
+                                <ItemsControl x:Name="ListViewRecipes" ItemsSource="{Binding Recipes}">
                                     <ItemsControl.ItemTemplate>
                                         <DataTemplate>
                                             <Border Margin="10" Height="160" Width="110" MouseDown="Border_MouseDown">
                                                 <StackPanel>
                                                     <Border Width="100" Height="100" CornerRadius="5" Margin="5" >
                                                         <Border.Background>
-                                                            <ImageBrush ImageSource="{Binding Image}"/>
+                                                            <ImageBrush ImageSource="{Binding Image, Mode=TwoWay}"/>
                                                         </Border.Background>
                                                     </Border>
-                                                    <TextBlock Margin="5 0" Text="{Binding Name}" TextWrapping="Wrap" FontSize="17"></TextBlock>
+                                                    <TextBlock Margin="5 0" Text="{Binding Name, Mode=TwoWay}" TextWrapping="Wrap" FontSize="17"></TextBlock>
                                                 </StackPanel>
                                             </Border>
                                         </DataTemplate>
