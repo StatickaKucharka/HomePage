@@ -10,5 +10,6 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Frame x:Name="myFrame" Source="strany/LandingPage.xaml" />
+        
     </Grid>
 </Window>

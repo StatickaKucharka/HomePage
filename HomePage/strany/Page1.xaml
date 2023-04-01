@@ -28,7 +28,7 @@
         <Grid Grid.Row="1">
             <StackPanel Grid.Row="1" HorizontalAlignment="Center" 
             VerticalAlignment="Top">
-                <TextBlock FontSize="25" Text="Nadpis Receptu:"></TextBlock>
+                <TextBlock FontSize="25" Text="Nadpis Receptu:" TextWrapping="Wrap"></TextBlock>
                 <TextBox 
                 FontSize="20"
                 TextWrapping="Wrap"
@@ -41,7 +41,7 @@
                 <TextBlock FontSize="25" Text="Ingrediencie:"></TextBlock>
                 <TextBox 
                 FontSize="20"
-                TextWrapping="Wrap"
+                TextWrapping="NoWrap"
                 x:Name="Ingrediencie"
                 >
                 </TextBox>
@@ -51,7 +51,7 @@
                 <TextBlock FontSize="25" Text="Postup:"></TextBlock>
                 <TextBox 
                  FontSize="20"
-                 TextWrapping="Wrap"
+                 TextWrapping="NoWrap"
                  x:Name="Postup">
 
                 </TextBox>

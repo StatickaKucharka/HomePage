@@ -20,9 +20,12 @@ namespace HomePage.strany
     /// </summary>
     public partial class Recepticky : Page
     {
+        
         public Recepticky()
         {
             InitializeComponent();
         }
+       
+
     }
 }

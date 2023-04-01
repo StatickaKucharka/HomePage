@@ -24,6 +24,8 @@ namespace HomePage.strany
     public partial class Page1 : Page
     {
         LandingPage ach = new LandingPage();
+        Recepticky sss = new Recepticky();
+        int x;
 
         public Page1()
         {
@@ -34,12 +36,23 @@ namespace HomePage.strany
 
         public void Button_Click(object sender, RoutedEventArgs e)
         {
-
-            Recipe recept = new Recipe(TBXNadpis.Text, CestaKObrazku.Text);
+            
+            if(x == 0)
+            {
+                x = 1;
+            }
+            else
+            {
+                x = ach.Recipes.Count - 1;
+            }
+            Recipe recept = new Recipe(TBXNadpis.Text, CestaKObrazku.Text, Postup.Text, Ingrediencie.Text);
             this.DataContext = recept;
+            
             ach.AddRecipe(recept);
-
             NavigateToPage2();
+            
+            
+            
 
         }
 
@@ -53,5 +66,6 @@ namespace HomePage.strany
 
             NavigationService.Navigate(ach);
         }
+        
     }
 }

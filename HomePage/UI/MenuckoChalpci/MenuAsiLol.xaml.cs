@@ -32,5 +32,11 @@ namespace HomePage.UI.MenuckoChalpci
             NavigationService navService = NavigationService.GetNavigationService(this);
             navService.Navigate(new System.Uri("/strany/Page1.xaml", UriKind.RelativeOrAbsolute));
         }
+
+        private void Tutorial_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            NavigationService navService = NavigationService.GetNavigationService(this);
+            navService.Navigate(new System.Uri("/strany/Tutorialyxaml.xaml", UriKind.RelativeOrAbsolute));
+        }
     }
 }

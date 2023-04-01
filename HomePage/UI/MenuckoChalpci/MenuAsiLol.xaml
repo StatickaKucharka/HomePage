@@ -15,11 +15,11 @@
             <TreeViewItem
     Header="Zlepši sa">
                 <TreeViewItem
-      Header="Kuchárky" />
+      Header="Kuchárky" Name="Kucharky"/>
                 <TreeViewItem
-      Header="Tutoriály" />
+      Header="Tutoriály" Name="Tutorial" MouseUp="Tutorial_MouseUp"/>
                 <TreeViewItem
-      Header="Obchod" />
+      Header="Obchod" Name="Obchod"/>
             </TreeViewItem>
             <TreeViewItem
     Header="Pridať Recept" MouseUp="TreeViewItem_MouseUp" />
