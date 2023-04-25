@@ -21,7 +21,7 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Image Name="rObrazok" Grid.Column="0" Source="{Binding Image}" Margin="50"></Image>
+            <Image Name="rObrazok" Grid.Column="0" Source="{Binding AdresaObrazku}" Margin="50"></Image>
             <ScrollViewer Grid.Column="1">
                 <StackPanel>
                     <TextBlock x:Name="rPostup" FontSize="25" TextWrapping="Wrap">

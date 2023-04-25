@@ -94,7 +94,7 @@
                                                 <StackPanel>
                                                     <Border Width="100" Height="100" CornerRadius="5" Margin="5" >
                                                         <Border.Background>
-                                                            <ImageBrush ImageSource="{Binding Image}"/>
+                                                            <ImageBrush ImageSource="{Binding AdresaObrazku}"/>
                                                         </Border.Background>
                                                     </Border>
                                                     <TextBlock Margin="5 0" Text="{Binding Name}" TextWrapping="Wrap" FontSize="17"></TextBlock>

@@ -13,7 +13,7 @@ namespace HomePage
     {
 
         private string name;
-        private string image;
+        private string adresaObrazku;
         private string ingrediencie;
         private string postup;
 
@@ -21,7 +21,7 @@ namespace HomePage
 
         public string Name { get { return this.name; } set { this.name = value; } }
         
-        public string Image { get { return this.image; } set { this.image = value; } }
+        public string AdresaObrazku{ get { return this.adresaObrazku; } set { this.adresaObrazku = value; } }
         public string Ingrediencie { get { return this.ingrediencie; } set { this.ingrediencie = value; } }
         public string Postup { get { return this.postup; } set { this.postup = value; } }
         
@@ -29,12 +29,12 @@ namespace HomePage
         public Recipe(string name, string image)
         {
             this.name = name;
-            this.image = image;
+            this.adresaObrazku = image;
         }
         public Recipe(string name, string image, string postup, string ingrediencie)
         {
             this.name = name;
-            this.image = image;
+            this.adresaObrazku = image;
             this.postup = postup;
             this.ingrediencie = ingrediencie;
             

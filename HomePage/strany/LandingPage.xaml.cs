@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -32,6 +33,8 @@ namespace HomePage.strany
 
             
             InitializeComponent();
+            
+            
             this.DataContext = this;
             AddRecipe(new Recipe("recept1",
                 "/Obrazky/recepty/recept1.jpg",
@@ -72,6 +75,8 @@ namespace HomePage.strany
                 "\r\n250 g\t\r\nrukola\r\n4 ks\t\r\nmandarínka\r\n1 ks\t\r\npomelo\r\n1 ks\t\r\njablko granátové\r\nkorenie štyroch farieb drvené\r\nsoľ\r\nDresing:\r\nz 1 mandarínky\t\r\nšťava mandarínková\r\npodľa chuti\t\r\nšťava citrónová\r\nmed\r\nvoda\r\nsoľ"));
             
 
+           
+
             if (Recipes.Count > 0)
             {
                 ListViewRecipes.ItemsSource = Recipes;
@@ -79,20 +84,21 @@ namespace HomePage.strany
 
 
         }
+        public void WriteOut() 
+        {
+            string connectionString = "server=localhost;UID=root;password=Lukas230920051508;database=kucharka;";
+            MySqlConnection connection = new MySqlConnection(connectionString);
+
+            // create a SQL query to insert a new recipe
+            string query = "INSERT INTO recepty (nadpis, ingrediencie, postup, adresaObrazku) VALUES (@nadpis, @ingrediencie, @postup, @adresaObrazku)";
+            MySqlCommand command = new MySqlCommand(query, connection);
+        }
         public void AddRecipe(Recipe recept)
         {
             recipes.Add(recept);
             
 
         }
-        public List<Recipe> GetRecipes()
-        {
-            return Recipes;
-            
-        }
-        
-
-
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
         {
             Recepticky s = new Recepticky();
@@ -100,6 +106,7 @@ namespace HomePage.strany
             Recipe selectedRecipe = (Recipe)((Border)sender).DataContext;
             s.DataContext = selectedRecipe;
             NavigationService.Navigate(s);
+            
 
         }
 
