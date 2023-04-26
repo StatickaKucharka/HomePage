@@ -62,7 +62,7 @@
             <StackPanel Grid.Row="1" 
                         HorizontalAlignment="Center" 
                         VerticalAlignment="Center">
-                <TextBlock FontSize="25" Text="adresaObrazku:"></TextBlock>
+                <TextBlock FontSize="25" Text="adresaObrazku(obrazok musí byť jpg inak sa nezobrazí):" TextWrapping="Wrap"></TextBlock>
                 <TextBox x:Name="CestaKObrazku" 
                          FontSize="20"
                          TextWrapping="Wrap"

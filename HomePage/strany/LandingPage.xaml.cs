@@ -33,10 +33,10 @@ namespace HomePage.strany
 
             
             InitializeComponent();
-            
-            
+
+
             this.DataContext = this;
-            AddRecipe(new Recipe("recept1",
+            /*AddRecipe(new Recipe("recept1",
                 "/Obrazky/recepty/recept1.jpg",
                 "1\r\nRúru rozohrejeme na 170ºC a menší, hlbší plech (22x32 cm) vymastíme trochou masla.\r\n\r\n2\r\nCesto: v miske spolu premiešame múku, cukor, soľ a pridáme na kocky pokrájané maslo. Prstami spracujeme mrveničku.\r\n\r\n3\r\nTretinu mrveničky odložíme bokom a zvyšok vysypeme a utlačíme na dno a trochu vytiahneme aj po stranách (asi 1 cm vysoko) plechu.\r\n\r\n4\r\nPlech vložíme do rúry na cca 12 minút, kým kraje cesta nezhnednú, vytiahneme a necháme vychladnúť bokom.\r\n\r\n5\r\nPlnka: v miske spolu premiešame cukor, múku, pridáme dve vajcia, kyslú smotanu a všetko vymiešame metličkou do hladka.",
                 "CESTO:\r\n200 g\r\nhladká múka\r\n150 g\r\nkryštálový cukor\r\n0.5 KL\r\nsoľ\r\n170 g\r\nmaslo\r\nPLNKA:\r\n40 g\r\nhladká múka\r\n200 g\r\nkryštálový cukor\r\n2 ks\r\nvajce\r\n100 g\r\nkyslá smotana\r\n300 g\r\nčučoriedky\r\n1 PL\r\ncitrónová kôra"));
@@ -74,7 +74,8 @@ namespace HomePage.strany
                 "1\r\nRukolu umyjeme. Mandarínku ošúpeme a nakrájame na kúsky. Pomelo ošúpeme a nafiletujeme – mesiačiky dužiny vyrežeme z vnútorných blán, nakrájame.\r\n\r\n2\r\nGranátové jablko rozrežeme na polovicu a zrnká z neho vyklepeme vareškou alebo lyžicou. Všetko dáme do misy, osolíme, okoreníme.\r\n\r\n3\r\nPripravíme dresing, zalejeme šalát a premiešame. Ak chceme výdatnejšiu verziu, pridáme slaný syr – fetu alebo ovčí syr.",
                 "\r\n250 g\t\r\nrukola\r\n4 ks\t\r\nmandarínka\r\n1 ks\t\r\npomelo\r\n1 ks\t\r\njablko granátové\r\nkorenie štyroch farieb drvené\r\nsoľ\r\nDresing:\r\nz 1 mandarínky\t\r\nšťava mandarínková\r\npodľa chuti\t\r\nšťava citrónová\r\nmed\r\nvoda\r\nsoľ"));
             
-
+            */
+            WriteOut();
            
 
             if (Recipes.Count > 0)
@@ -90,9 +91,32 @@ namespace HomePage.strany
             MySqlConnection connection = new MySqlConnection(connectionString);
 
             // create a SQL query to insert a new recipe
-            string query = "INSERT INTO recepty (nadpis, ingrediencie, postup, adresaObrazku) VALUES (@nadpis, @ingrediencie, @postup, @adresaObrazku)";
+            string query = "Select nadpis, ingrediencie, postup, adresaObrazku from recepty";
             MySqlCommand command = new MySqlCommand(query, connection);
+            connection.Open();
+            MySqlDataReader reader = command.ExecuteReader();
+            if (!reader.HasRows)
+            {
+                Console.WriteLine("No rows returned by query");
+            }
+
+            else { 
+            while (reader.Read())
+            {
+                    Recipe recept = new Recipe
+                        ()
+                    {
+                        Name = reader["nadpis"].ToString(),
+                        Ingrediencie = reader["ingrediencie"].ToString(),
+                        Postup = reader["postup"].ToString(),
+                        AdresaObrazku = reader["adresaObrazku"].ToString()
+                };
+                AddRecipe(recept);
+            }
+            connection.Close();
         }
+
+    }
         public void AddRecipe(Recipe recept)
         {
             recipes.Add(recept);

@@ -15,7 +15,8 @@
             <TreeViewItem
     Header="Zlepši sa">
                 <TreeViewItem
-      Header="Kuchárky" Name="Kucharky"/>
+      Header="Kuchárky" Name="Kucharky" MouseUp="Kucharky_MouseUp"
+                    />
                 <TreeViewItem
       Header="Tutoriály" Name="Tutorial" MouseUp="Tutorial_MouseUp"/>
                 <TreeViewItem
