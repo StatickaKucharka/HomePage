@@ -11,30 +11,33 @@
     <Grid Background="Transparent">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
-            <ColumnDefinition/>
+            
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="20*"/>
             <RowDefinition Height="80*"/>
         </Grid.RowDefinitions>
         <TextBlock Grid.ColumnSpan="2" FontSize="40" VerticalAlignment="Center" HorizontalAlignment="Center">Kucharky</TextBlock>
-        <TextBlock FontSize="20" Grid.Row="1" Margin="20">
-            -Fit Recepty
-            <LineBreak/>
-            -Tasty
-            <LineBreak/>
-            -Yummly Recipes and Shopping List
-            <LineBreak/>
-            -FitMenCook – Healthy Recipes
-            <LineBreak/>
-            -Online kuchárka – recepty pre každého
-            <LineBreak/>
-            -Recepty a Zdravé Varenie
-            <LineBreak/>
-            -My Recipes Cookbook: RecetteTek
-            <LineBreak/>
-            -Mealime – Meal Planner, Recipes and Grocery List
-        </TextBlock>
-         
+        <ScrollViewer  Grid.Row="1">
+            <StackPanel>
+                <TextBlock FontSize="20" HorizontalAlignment="Center" Text="-Fit Recepty"/>
+                <Image Source="https://shop.fitrecepty.sk/wp-content/uploads/2022/07/obal.jpg" Height="100" Width="150"/>
+                <TextBlock FontSize="20" HorizontalAlignment="Center" Text="-Tasty"/>
+                <Image Source="https://play-lh.googleusercontent.com/gcAQcWADEZsAU8DPXisFrTF2Y9eFNF-l7IZmYt0oOLK4vXewovKreaz6jEBG_2wWNw" Height="100" Width="150"/>
+                    <TextBlock FontSize="20" HorizontalAlignment="Center" Text="-Yummly Recipes and Shopping List"/>
+                <Image Source="https://x.yummlystatic.com/web/og-image.jpg" Height="100" Width="150"/>
+                    <TextBlock FontSize="20" HorizontalAlignment="Center" Text="-FitMenCook – Healthy Recipes"/>
+                <Image Source="https://play-lh.googleusercontent.com/K0x_6cegMI2c1LhGM71eD4QN8yE5lZ186pSeisY4GaAkcyu0g4Nu8DfE2VeyYG7ylqE" Height="100" Width="150"/>
+                    <TextBlock FontSize="20" HorizontalAlignment="Center" Text="-Online kuchárka – recepty pre každého"/>
+                <Image Source="https://play-lh.googleusercontent.com/uXsFQRSP55YjsCB-8b9WDPFL0ZMsCIuCzMkDRLlO8X1Cjx0zdYz44IaXL4x1CUmOjEM" Height="100" Width="150"/>
+                    <TextBlock FontSize="20" HorizontalAlignment="Center" Text="-Recepty a Zdravé Varenie"/>
+                <Image Source="https://nimda.dibuk.eu/data/0/1/534384f7b99b836c9c.jpg" Height="100" Width="150"/>
+                    <TextBlock FontSize="20" HorizontalAlignment="Center" Text="-My Recipes Cookbook: RecetteTek"/>
+                <Image Source="https://m.media-amazon.com/images/I/A1j9zJiyvnL.png" Height="100" Width="150"/>
+                <TextBlock FontSize="20" HorizontalAlignment="Center" Text="-Mealime – Meal Planner, Recipes and Grocery List"/>
+                <Image Source="https://www.mealime.com/images/open-graph-image.png" Height="100" Width="150"/>
+            </StackPanel>
+        </ScrollViewer>
+        
     </Grid>
 </Page>
