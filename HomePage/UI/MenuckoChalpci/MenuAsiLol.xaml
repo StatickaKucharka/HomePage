@@ -11,7 +11,8 @@
         <TreeView
   MinWidth="220">
             <TreeViewItem
-    Header="Domov" />
+    Header="Domov"
+                MouseUp="TreeViewItem_MouseUp_1"/>
             <TreeViewItem
     Header="Zlepši sa">
                 <TreeViewItem

@@ -37,5 +37,6 @@
                 </StackPanel>
             </ScrollViewer>
         </Grid>
+        <Button Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Height="50" Width="150" Click="Button_Click">DELETE</Button>
     </Grid>
 </Page>

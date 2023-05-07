@@ -44,5 +44,11 @@ namespace HomePage.UI.MenuckoChalpci
             NavigationService navService = NavigationService.GetNavigationService(this);
             navService.Navigate(new System.Uri("/strany/Kucharky.xaml", UriKind.RelativeOrAbsolute));
         }
+
+        private void TreeViewItem_MouseUp_1(object sender, MouseButtonEventArgs e)
+        {
+            NavigationService navService = NavigationService.GetNavigationService(this);
+            navService.Navigate(new System.Uri("/strany/LandingPage.xaml", UriKind.RelativeOrAbsolute));
+        }
     }
 }
