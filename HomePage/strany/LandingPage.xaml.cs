@@ -1,4 +1,6 @@
-﻿using MySql.Data.MySqlClient;
+﻿using HomePage.LoginReigster.login;
+using HomePage.LoginReigster.register;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -142,6 +144,18 @@ namespace HomePage.strany
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
+        }
+
+        private void TextBlock_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            Login loginWindow = new Login();
+            loginWindow.ShowDialog();
+        }
+
+        private void TextBlock_MouseUp_1(object sender, MouseButtonEventArgs e)
+        {
+            register registerWindow = new register();
+            registerWindow.ShowDialog();
         }
     }
 }

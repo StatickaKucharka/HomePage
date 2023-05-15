@@ -33,7 +33,16 @@
                         <GradientStop Color="White" Offset="1"/>
                         <GradientStop Color="#FF3A0CA3" Offset="0"/>
                     </LinearGradientBrush>
+                    
                 </Grid.Background>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80*"/>
+                    <RowDefinition Height="20*"/>
+                </Grid.RowDefinitions>
+                <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock Margin="5" Text="login" MouseDown="TextBlock_MouseUp"></TextBlock>
+                    <TextBlock Margin="5" Text="register" MouseDown="TextBlock_MouseUp_1"></TextBlock>
+                </StackPanel>
                 <Ellipse Width="100" Height="100">
                     <Ellipse.OpacityMask>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
