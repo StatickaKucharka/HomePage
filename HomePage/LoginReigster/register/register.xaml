@@ -69,9 +69,9 @@
             <Label Content="Register" Foreground="White" FontSize="25" HorizontalAlignment="Center" Margin="20"/>
             <Separator></Separator>
             <Label Content="Username" Foreground="White" Margin="20,0,0,0"/>
-            <TextBox Name="txtUsername" Background="#ded9d4" FontSize="15" Margin="20,0,20,0" Padding="3"/>
+            <TextBox Name="txtUsername" Background="#ded9d4" FontSize="15" Margin="20,0,20,0" Padding="3" />
             <Label Content="E-mail" Foreground="White" Margin="20,0,0,0"/>
-            <TextBox Name="txtEmail" Background="#ded9d4" FontSize="15" Margin="20,0,20,0" Padding="3"/>
+            <TextBox Name="txtEmail" Background="#ded9d4" FontSize="15" Margin="20,0,20,0" Padding="3" Text="@gmail.com"/>
             <Label Content="Password" Foreground="White" Margin="20,0,0,0"></Label>
             <PasswordBox Name="txtPassword" Background="#ded9d4" FontSize="15"  Margin="20,0,20,0" Padding="3"></PasswordBox>
             <Button Style="{DynamicResource RoundedButton}" Name="btnSubmit" Content="Submit" Margin="60,25,60,10" Background="#ded9d4" FontSize="17" HorizontalAlignment="Center" Padding="2" Width="105" Click="btnSubmit_Click" ></Button>

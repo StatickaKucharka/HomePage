@@ -27,7 +27,7 @@
     Header="Pridať Recept" MouseUp="TreeViewItem_MouseUp" />
         </TreeView>
         <TreeViewItem
-    Header="Profil"  />
+    Header="Profil" MouseUp="TreeViewItem_MouseUp_2" />
         <TreeViewItem
     Header="Nastavenia" />
     </StackPanel>

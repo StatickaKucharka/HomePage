@@ -86,5 +86,9 @@ namespace HomePage.strany
             e.Handled = true;
         }
 
+        private void TBXNadpis_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

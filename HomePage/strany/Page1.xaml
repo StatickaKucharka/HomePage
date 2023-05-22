@@ -32,7 +32,7 @@
                 <TextBox 
                 FontSize="20"
                 TextWrapping="Wrap"
-                x:Name="TBXNadpis"
+                x:Name="TBXNadpis" TextChanged="TBXNadpis_TextChanged"
                 >
                 </TextBox>
             </StackPanel>

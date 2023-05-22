@@ -1,10 +1,14 @@
-﻿using System;
+﻿using HomePage.LoginReigster.login;
+using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -25,6 +29,7 @@ namespace HomePage.LoginReigster.register
             get { return this.users; }
             set { this.users = value; }
         }
+
         public register()
         {
             InitializeComponent();
@@ -32,32 +37,68 @@ namespace HomePage.LoginReigster.register
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
-            User sUser = new User(txtUsername.Text, txtPassword.Password, txtEmail.Text);
-            
-            
 
-            if (txtEmail.Text.Contains("@gmail.com")) {
-                AddUser(sUser);
-                if (users.Count != 0)
+            {
+
+
+                string connectionString = "server=localhost;UID=root;password=Lukas230920051508;database=kucharka;";
+                MySqlConnection connection = new MySqlConnection(connectionString);
+
+                // create a SQL query to insert a new recipe
+                string query = "SELECT * from users where userName = @userName and userPassword = @userPassword";
+                MySqlCommand command = new MySqlCommand(query, connection);
+                command.Parameters.AddWithValue("@userName", txtUsername.Text);
+                command.Parameters.AddWithValue("@userPassword", txtPassword.Password);
+                connection.Open();
+                int rowsAffected = command.ExecuteNonQuery();
+                int Count = Convert.ToInt32(command.ExecuteScalar());
+                if (Count == 0)
                 {
-                    MessageBox.Show("You successfully registered");
+                    User user = new User()
+                    {
+                        UserName = txtUsername.Text,
+                        Password = txtPassword.Password,
+                        Email = txtEmail.Text
+                    };
+                    users.Add(user);
+
+                    
+
+                    // create a SQL query to insert a new recipe
+                    string query1 = "INSERT INTO users(userName, userPassword, email) VALUES (@userName, @userPassword, @email)";
+                    MySqlCommand command1 = new MySqlCommand(query1, connection);
+
+                    // add parameters to the query
+
+                    command1.Parameters.AddWithValue("@userName", txtUsername.Text);
+                    command1.Parameters.AddWithValue("@userPassword", txtPassword.Password);
+                    command1.Parameters.AddWithValue("@email", txtEmail.Text);
+
+                    // open the connection and execute the query
+                    
+                    int rowsAffected1 = command1.ExecuteNonQuery();
+                    MessageBox.Show("cg to your registration");
+
+
                 }
                 else
                 {
-                    MessageBox.Show("registration failed");
+                    MessageBox.Show("meno už existuje");
                 }
+                connection.Close();
+
+                
+                
+
                 
             }
-            else
-            {
-                MessageBox.Show("input valid email address");
-            }
+            
             
         }
-        public void AddUser(User user)
-        {
-            users.Add(user);
-        }
+        
+
+
+
     }
 }
 

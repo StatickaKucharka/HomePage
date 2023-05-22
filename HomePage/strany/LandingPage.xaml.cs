@@ -37,6 +37,7 @@ namespace HomePage.strany
             InitializeComponent();
 
 
+            
             this.DataContext = this;
             /*AddRecipe(new Recipe("recept1",
                 "/Obrazky/recepty/recept1.jpg",
