@@ -73,8 +73,8 @@
     <Compile Include="LoginReigster\login\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
-    <Compile Include="LoginReigster\register\register.xaml.cs">
-      <DependentUpon>register.xaml</DependentUpon>
+    <Compile Include="LoginReigster\register\Register.xaml.cs">
+      <DependentUpon>Register.xaml</DependentUpon>
     </Compile>
     <Compile Include="Recipe.cs" />
     <Compile Include="strany\Kucharky.xaml.cs">
@@ -82,6 +82,9 @@
     </Compile>
     <Compile Include="strany\LandingPage.xaml.cs">
       <DependentUpon>LandingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="strany\Oblubene.xaml.cs">
+      <DependentUpon>Oblubene.xaml</DependentUpon>
     </Compile>
     <Compile Include="strany\Page1.xaml.cs">
       <DependentUpon>Page1.xaml</DependentUpon>
@@ -99,11 +102,12 @@
       <DependentUpon>MenuAsiLol.xaml</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
+    <Compile Include="UserManager.cs" />
     <Page Include="LoginReigster\login\Login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="LoginReigster\register\register.xaml">
+    <Page Include="LoginReigster\register\Register.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -124,6 +128,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="strany\LandingPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="strany\Oblubene.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

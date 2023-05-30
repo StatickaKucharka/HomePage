@@ -18,6 +18,8 @@ namespace HomePage
         private string userName;
         private string password;
         private string email;
+        private string profilovka;
+        public string Profilovka { get { return this.profilovka; } set { this.profilovka = value; } }
         public string UserName { get { return userName; } set { userName = value; } }
         public string Password { get { return password; } set { password = value; } }
         public string Email { get { return email; } set { email = value; } }
@@ -28,5 +30,13 @@ namespace HomePage
             this.password = password;
             this.email = email;
         }
+        public User(string userName, string password, string email,string profilovka)
+        {
+            this.userName = userName;
+            this.password = password;
+            this.email = email;
+            this.profilovka = profilovka;
+        }
     }
+    
 }

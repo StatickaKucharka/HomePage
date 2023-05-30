@@ -29,6 +29,9 @@
         <TreeViewItem
     Header="Profil" MouseUp="TreeViewItem_MouseUp_2" />
         <TreeViewItem
+    Header="Obľúbené" MouseUp="TreeViewItem_MouseUp_3"/>
+        <TreeViewItem
     Header="Nastavenia" />
+        
     </StackPanel>
 </UserControl>

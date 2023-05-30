@@ -24,7 +24,8 @@ namespace HomePage.strany
     public partial class LandingPage : Page
     {
         
-        
+        string connectionString = "server=localhost;UID=root;password=Lukas230920051508;database=kucharka;";
+
         private List<Recipe> recipes = new List<Recipe>();
         public List<Recipe> Recipes { get { return this.recipes; } set { this.recipes = value; } }
 
@@ -33,11 +34,12 @@ namespace HomePage.strany
         public LandingPage()
         {
 
-            
+
             InitializeComponent();
-
-
             
+
+
+
             this.DataContext = this;
             /*AddRecipe(new Recipe("recept1",
                 "/Obrazky/recepty/recept1.jpg",
@@ -78,8 +80,11 @@ namespace HomePage.strany
                 "\r\n250 g\t\r\nrukola\r\n4 ks\t\r\nmandarínka\r\n1 ks\t\r\npomelo\r\n1 ks\t\r\njablko granátové\r\nkorenie štyroch farieb drvené\r\nsoľ\r\nDresing:\r\nz 1 mandarínky\t\r\nšťava mandarínková\r\npodľa chuti\t\r\nšťava citrónová\r\nmed\r\nvoda\r\nsoľ"));
             
             */
+
             WriteOut();
-           
+
+            profilovka.DataContext = UserManager.CurrentUser;
+
 
             if (Recipes.Count > 0)
             {
@@ -88,24 +93,31 @@ namespace HomePage.strany
 
 
         }
-        public void WriteOut() 
+        public void WriteOut()
         {
+
+
             string connectionString = "server=localhost;UID=root;password=Lukas230920051508;database=kucharka;";
             MySqlConnection connection = new MySqlConnection(connectionString);
 
             // create a SQL query to insert a new recipe
             string query = "Select nadpis, ingrediencie, postup, adresaObrazku from recepty";
+
             MySqlCommand command = new MySqlCommand(query, connection);
+
+
             connection.Open();
+
             MySqlDataReader reader = command.ExecuteReader();
             if (!reader.HasRows)
             {
                 Console.WriteLine("No rows returned by query");
             }
 
-            else { 
-            while (reader.Read())
+            else
             {
+                while (reader.Read())
+                {
                     Recipe recept = new Recipe
                         ()
                     {
@@ -113,27 +125,29 @@ namespace HomePage.strany
                         Ingrediencie = reader["ingrediencie"].ToString(),
                         Postup = reader["postup"].ToString(),
                         AdresaObrazku = reader["adresaObrazku"].ToString()
-                };
-                AddRecipe(recept);
+                    };
+                    AddRecipe(recept);
+                }
+                connection.Close();
             }
-            connection.Close();
-        }
 
-    }
+
+        }
         public void AddRecipe(Recipe recept)
         {
             recipes.Add(recept);
-            
+
 
         }
+
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
         {
             Recepticky s = new Recepticky();
-            
+
             Recipe selectedRecipe = (Recipe)((Border)sender).DataContext;
             s.DataContext = selectedRecipe;
             NavigationService.Navigate(s);
-            
+
 
         }
 
@@ -158,5 +172,13 @@ namespace HomePage.strany
             register registerWindow = new register();
             registerWindow.ShowDialog();
         }
+
+        private void profilovka_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            NavigationService navService = NavigationService.GetNavigationService(this);
+            navService.Navigate(new System.Uri("/strany/profil.xaml", UriKind.RelativeOrAbsolute));
+        }
+        
     }
-}
+        
+    }

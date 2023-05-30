@@ -43,7 +43,8 @@
                     <TextBlock Margin="5" Text="login" MouseDown="TextBlock_MouseUp"></TextBlock>
                     <TextBlock Margin="5" Text="register" MouseDown="TextBlock_MouseUp_1"></TextBlock>
                 </StackPanel>
-                <Ellipse Width="100" Height="100">
+                <Ellipse Width="100" Height="100" Name="profilovka" MouseUp="profilovka_MouseUp"
+                         >
                     <Ellipse.OpacityMask>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                             <GradientStop Color="Black"/>
@@ -51,7 +52,7 @@
                         </LinearGradientBrush>
                     </Ellipse.OpacityMask>
                     <Ellipse.Fill>
-                        <ImageBrush ImageSource="/Obrazky/UserProfile/tvar.jpg"></ImageBrush>
+                        <ImageBrush ImageSource="{Binding Profilovka}" x:Name="neviemuz"></ImageBrush>
                     </Ellipse.Fill>
                 </Ellipse>
             </Grid>

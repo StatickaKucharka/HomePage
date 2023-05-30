@@ -62,5 +62,10 @@ namespace HomePage.strany
             navService.Navigate(new System.Uri("/strany/LandingPage.xaml", UriKind.RelativeOrAbsolute));
 
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

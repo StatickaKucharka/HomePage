@@ -36,7 +36,10 @@
                     </TextBlock>
                 </StackPanel>
             </ScrollViewer>
-        </Grid>
-        <Button Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Height="50" Width="150" Click="Button_Click">DELETE</Button>
+        </Grid >
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button  VerticalAlignment="Center" Height="50" Width="150" Click="Button_Click" Margin="5">vymazať</Button>
+            <Button Grid.Row="2" VerticalAlignment="Center" Height="50" Width="150" Click="Button_Click_1">pridať do obľúbených</Button>
+        </StackPanel>
     </Grid>
 </Page>

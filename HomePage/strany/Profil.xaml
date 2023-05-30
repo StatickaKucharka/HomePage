@@ -9,6 +9,19 @@
       Title="Profil">
 
     <Grid Background="Transparent">
-        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="100" Text="Welcome Lukáš"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="{Binding UserName}" Grid.Column="0" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.RowSpan="2"></TextBlock>
+        <Button Name = "Browse" Content="Upload your profile picture"  Click="Browse_Click" Grid.Column="1" Grid.RowSpan="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <StackPanel Grid.Row="0" Grid.Column="1">
+            <Image Name = "ImageViewer1" Source="{Binding Profilovka}"/>
+        </StackPanel>
+
     </Grid>
 </Page>

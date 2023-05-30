@@ -24,7 +24,7 @@ namespace HomePage.LoginReigster.login
     public partial class Login : Window
     {
 
-        
+        public static bool IsLogged = false;
         public Login()
         {
             InitializeComponent();
@@ -46,9 +46,14 @@ namespace HomePage.LoginReigster.login
             int Count = Convert.ToInt32(command.ExecuteScalar());
             if (Count > 0)
             {
+                User current = new User();
+                current.UserName = txtUsername.Text;
+                current.Password = txtPassword.Password;
+                UserManager.CurrentUser = current;
                 MainWindow dashborad = new MainWindow();
                 this.Close();
                 dashborad.Show();
+                
 
 
             }
