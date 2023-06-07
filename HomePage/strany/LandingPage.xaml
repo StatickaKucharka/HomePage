@@ -1,0 +1,123 @@
+﻿<Page x:Class="HomePage.strany.LandingPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:HomePage.strany"
+      xmlns:UIMenuIGuess="clr-namespace:HomePage.UI.MenuckoChalpci"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="LandingPage">
+
+
+    <Grid Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="70*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid>
+            <Grid.OpacityMask>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Grid.OpacityMask>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="35*"/>
+                <RowDefinition Height="65*"/>
+            </Grid.RowDefinitions>
+            <Grid>
+                <Grid.Background>
+                    <SolidColorBrush 
+                        Color="#967E76">
+                    </SolidColorBrush>
+                </Grid.Background>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80*"/>
+                    <RowDefinition Height="20*"/>
+                </Grid.RowDefinitions>
+                <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock Margin="5" Text="login" MouseDown="TextBlock_MouseUp"></TextBlock>
+                    <TextBlock Margin="5" Text="register" MouseDown="TextBlock_MouseUp_1"></TextBlock>
+                </StackPanel>
+                <Ellipse Width="100" Height="100" Name="profilovka" MouseUp="profilovka_MouseUp"
+                         >
+                    <Ellipse.OpacityMask>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="Black"/>
+                            <GradientStop Color="White" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Ellipse.OpacityMask>
+                    <Ellipse.Fill>
+                        <ImageBrush ImageSource="{Binding Profilovka}" x:Name="neviemuz"></ImageBrush>
+                    </Ellipse.Fill>
+                </Ellipse>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Grid.OpacityMask>
+                    <SolidColorBrush 
+                        Color="#967E76">
+                    </SolidColorBrush>
+                </Grid.OpacityMask>
+                <UIMenuIGuess:MenuAsiLol Height="auto" Width="auto" Loaded="MenuAsiLol_Loaded"/>
+            </Grid>
+        </Grid>
+        <Grid Grid.Column="1">
+            <Grid.Background>
+                <SolidColorBrush 
+                        Color="#d7c0ae">
+                </SolidColorBrush>
+            </Grid.Background>
+            <Grid Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height ="10*"/>
+                    <RowDefinition Height="80*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30*"/>
+                        <ColumnDefinition Width="70*"/>
+                    </Grid.ColumnDefinitions>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="51*"/>
+                        <ColumnDefinition Width="69"/>
+                        <ColumnDefinition Width="347*"/>
+                        <ColumnDefinition Width="93*"/>
+                    </Grid.ColumnDefinitions>
+                    <ScrollViewer Grid.Column="1" Grid.ColumnSpan="3">
+                        <StackPanel>
+                            <TextBlock Margin="10" FontSize="22" FontWeight="Medium"><Run Text="R"/><Run Language="sk-sk" Text="ecepty"/></TextBlock>
+                            <StackPanel Margin="20,0">
+                                <ItemsControl x:Name="ListViewRecipes" ItemsSource="{Binding BindsDirectlyToSource=True}">
+                                    <ItemsControl.ItemTemplate>
+
+                                        <DataTemplate>
+                                            <Border x:Name="Navigacia" Margin="10" Height="160" Width="110" MouseDown="Border_MouseDown" >
+                                                <StackPanel>
+                                                    <Border Width="100" Height="100" CornerRadius="5" Margin="5" >
+                                                        <Border.Background>
+                                                            <ImageBrush ImageSource="{Binding AdresaObrazku}"/>
+                                                        </Border.Background>
+                                                    </Border>
+                                                    <TextBlock Margin="5 0" Text="{Binding Name}" TextWrapping="Wrap" FontSize="17"></TextBlock>
+                                                </StackPanel>
+                                            </Border>
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                    <ItemsControl.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <WrapPanel/>
+                                        </ItemsPanelTemplate>
+                                    </ItemsControl.ItemsPanel>
+                                </ItemsControl>
+                            </StackPanel>
+                        </StackPanel>
+                    </ScrollViewer>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

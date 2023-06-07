@@ -1,0 +1,84 @@
+﻿<Page x:Class="HomePage.strany.Page1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:HomePage.strany"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Page1">
+
+    <Grid Background="#D7C0AE">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="20*"/>
+        </Grid.RowDefinitions>
+        <TextBlock
+            Grid.ColumnSpan="2"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            FontSize="40"><Run Language="sk-sk" Text="Pridať Recept"/></TextBlock>
+        <Grid Grid.Row="1">
+            <StackPanel Grid.Row="1" HorizontalAlignment="Center" 
+            VerticalAlignment="Top">
+                <TextBlock FontSize="25" TextWrapping="Wrap"><Run Language="sk-sk" Text="Názov"/><Run Text=" Receptu:"/></TextBlock>
+                <TextBox 
+                FontSize="20"
+                TextWrapping="Wrap"
+                x:Name="TBXNadpis" TextChanged="TBXNadpis_TextChanged"
+                >
+                </TextBox>
+            </StackPanel>
+            <StackPanel Grid.Row="1" HorizontalAlignment="Center" 
+            VerticalAlignment="Center">
+                <TextBlock FontSize="25" Text="Ingrediencie:"></TextBlock>
+                <TextBox 
+                FontSize="20"
+                TextWrapping="NoWrap"
+                x:Name="Ingrediencie"
+                >
+                </TextBox>
+            </StackPanel>
+            <StackPanel Grid.Row="1" HorizontalAlignment="Center" 
+            VerticalAlignment="Bottom">
+                <TextBlock FontSize="25" Text="Postup:"></TextBlock>
+                <TextBox 
+                 FontSize="20"
+                 TextWrapping="NoWrap"
+                 x:Name="Postup">
+
+                </TextBox>
+
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="1">
+            <StackPanel Grid.Row="1" 
+                        HorizontalAlignment="Center" 
+                        VerticalAlignment="Center">
+                <TextBlock FontSize="25" TextWrapping="Wrap"><Run Language="sk-sk" Text="Cesta k obrázku (.jpg)"/></TextBlock>
+                <TextBox x:Name="CestaKObrazku" 
+                         FontSize="20"
+                         TextWrapping="Wrap"
+                         >
+                </TextBox>
+            </StackPanel>
+        </Grid>
+        <Button Grid.Row="2"
+                Grid.ColumnSpan="2"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+
+                Content="Pridať"
+                Click="Button_Click"
+                Name ="HauoPanKolega"
+                
+                >
+
+        </Button>
+    </Grid>
+</Page>
